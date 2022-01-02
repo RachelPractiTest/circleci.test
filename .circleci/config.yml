@@ -11,18 +11,8 @@ jobs:
       - setup_remote_docker:
           version: 19.03.13
           
-      - run: lein test-out junit test-results.xml
+      - run: lein test
 
-      - firecracker/fire:
-          api_token: FIRE_API_TOKEN
-          author_id: 6604
-          email: ${FIRE_EMAIL}
-          firecracker_version: v2.0.3
-          project_id: 5079
-          test_folder: test_results
-          multitestset: false
-          testset_name: rspec
-          api_uri: https://stage.practitest.com/
 
 
 workflows:
