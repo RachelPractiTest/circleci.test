@@ -231,6 +231,22 @@ Maintain compatibility with the `clojure.test` assertion expansions such as
 Must be possible to use more than one test reporter at a time, for instance it's
 desirable to produce Junit XML and console output during a test run.
 
+# firecracker circleci.test
+
+We are going to use circleci.test just as example to configure firecracker orb into circleci config.
+
+# firecracker parameters
+
+To complete your configuration you will need to
+
+1. Go to circleci.yml file
+2. replace author_id and project_id
+   1. author_id you need to set your id in PractiTest app
+   2. project_id set if to your project id in PractiTest app
+3. create circleci context with the name 'PT API Token' inside of it create those parameters
+   1. FIRE_API_TOKEN and set the value to your api token
+   2. FIRE_EMAIL and set it to be your email address
+
 ## License
 
 Copyright © 2017-2020 Circle Internet Services and contributors
