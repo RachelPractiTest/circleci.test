@@ -22,7 +22,7 @@ jobs:
 
       - firecracker/fire:
           firecracker_version: v2.0.3
-          test_folder: circleci.test/test-results
+          test_folder: test-results
           author_id: 6604
           api_uri: https://stage.practitest.com/
           api_token: FIRE_API_TOKEN
