@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  firecracker: practitest/firecracker@1.0.0
 jobs:
   build:
     docker:
@@ -9,6 +7,9 @@ jobs:
     steps:
       - checkout
 
+      - cache-restore:
+          # always restore the latest cache
+          key: v1-jars-
 
       - run: lein test
 
