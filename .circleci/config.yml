@@ -3,20 +3,30 @@ orbs:
   firecracker: practitest/firecracker@1.0.0
 jobs:
   build:
+    working_directory: /tmp
     docker:
       - image: clojure:lein-2.8.1
-    working_directory: ~/circleci.test
     steps:
       - checkout
 
-      - cache-restore:
-          # always restore the latest cache
-          key: v1-jars-
+      - setup_remote_docker:
+          version: 19.03.13
 
       - run: lein test
 
-      - cache-save:
-          key: v1-jars-{{ checksum "project.clj" }}
-          paths:
-            - ~/.m2
+      - store_test_results:
+          path: test_results
 
+      - store_artifacts:
+          path: /tmp/art-1
+          destination: artifact-file
+
+      - store_artifacts:
+          path: /tmp/artifacts
+
+workflows:
+  my-workflow:
+    jobs:
+      - build:
+          context:
+            - PT API Token
