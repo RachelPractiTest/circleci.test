@@ -3,7 +3,7 @@ orbs:
   firecracker: practitest/firecracker@1.0.0
 jobs:
   build:
-    working_directory: test-results
+    working_directory: ~/circleci.test
     docker:
       - image: clojure:lein-2.8.1
     steps:
@@ -25,7 +25,7 @@ jobs:
           destination: artifact-file
 
       - store_artifacts:
-          path: test_results
+          path: test-results
 
       - firecracker/fire:
           firecracker_version: v2.0.3
