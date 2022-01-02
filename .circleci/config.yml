@@ -11,7 +11,7 @@ jobs:
       - setup_remote_docker:
           version: 19.03.13
           
-      - run: lein test
+      - run: lein test-out junit test-results.xml
 
       - firecracker/fire:
           api_token: FIRE_API_TOKEN
