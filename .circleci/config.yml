@@ -15,14 +15,14 @@ jobs:
       - run: lein test
 
       - store_test_results:
-          path: test_results
+          path: test-paths
 
       - store_artifacts:
-          path: test_results
+          path: test-paths
           destination: artifact-file
 
       - store_artifacts:
-          path: test_results
+          path: test-paths
 
 workflows:
   my-workflow:
