@@ -5,7 +5,6 @@ jobs:
   build:
     docker:
       - image: clojure:lein-2.8.1
-    working_directory: ~/circleci.test
     steps:
       - checkout
 
