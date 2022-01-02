@@ -3,6 +3,7 @@ orbs:
   firecracker: practitest/firecracker@1.0.0
 jobs:
   build:
+    working_directory: /tmp
     docker:
       - image: clojure:lein-2.8.1
     steps:
@@ -16,6 +17,12 @@ jobs:
       - store_test_results:
           path: test_results
 
+      - store_artifacts:
+          path: /tmp/art-1
+          destination: artifact-file
+
+      - store_artifacts:
+          path: /tmp/artifacts
 
 workflows:
   my-workflow:
