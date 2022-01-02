@@ -13,8 +13,6 @@ jobs:
           # always restore the latest cache
           key: v1-jars-
 
-  test:
-    steps:
       - run: lein test
 
       - cache-save:
@@ -34,9 +32,6 @@ jobs:
 workflows:
   my-workflow:
     jobs:
-      - build
-      - test:
-          requires:
-            - build
+      - build:
           context:
             - PT API Token
