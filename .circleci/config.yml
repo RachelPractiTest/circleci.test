@@ -18,6 +18,7 @@ jobs:
           firecracker_version: v2.0.3
           test_folder: test-results
           author_id: 6604
+          api_uri: https://stage.practitest.com/
           api_token: FIRE_API_TOKEN
           email: ${FIRE_EMAIL}
           project_id: 5079
