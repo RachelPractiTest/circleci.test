@@ -21,11 +21,11 @@ jobs:
       - run: ls test
 
       - store_test_results:
-          path: test_results
+          path: test-results
 
       - firecracker/fire:
           firecracker_version: v2.0.3
-          test_folder: test_results
+          test_folder: circleci.test/test-results
           author_id: 6604
           api_uri: https://stage.practitest.com/
           api_token: FIRE_API_TOKEN
