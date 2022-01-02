@@ -4,7 +4,7 @@ orbs:
 jobs:
   build:
     working_directory: ~/circleci.test
-    docker:
+    machine:
       - image: clojure:lein-2.8.1
     steps:
       - checkout
