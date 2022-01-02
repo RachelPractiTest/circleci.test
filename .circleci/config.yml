@@ -19,7 +19,7 @@ jobs:
           key: v1-jars-{{ checksum "project.clj" }}
           paths:
             - ~/.m2
-            -
+
       - firecracker/fire:
           api_token: FIRE_API_TOKEN
           author_id: '${FIRE_AUTHOR}'
