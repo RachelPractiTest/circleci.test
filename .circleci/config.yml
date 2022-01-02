@@ -18,6 +18,8 @@ jobs:
 
       - run: ls test-results
 
+      - run: ls test
+
       - store_test_results:
           path: test-results
 
