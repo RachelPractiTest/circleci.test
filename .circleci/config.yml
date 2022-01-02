@@ -9,24 +9,19 @@ jobs:
     steps:
       - checkout
 
-      - setup_remote_docker:
-          version: 19.03.13
-
       - run: lein test
 
       - run: ls
 
       - run: ls test-results
 
-      - run: ls test_results
-
       - run: ls test
 
       - store_test_results:
-          path: test_results
+          path: test-results
 
       - store_artifacts:
-          path: test_results
+          path: test-results
           destination: artifact-file
 
       - store_artifacts:
@@ -34,7 +29,7 @@ jobs:
 
       - firecracker/fire:
           firecracker_version: v2.0.3
-          test_folder: test_results
+          test_folder: test-results
           author_id: 6604
           api_uri: https://stage.practitest.com/
           api_token: FIRE_API_TOKEN
