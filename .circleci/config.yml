@@ -20,10 +20,3 @@ jobs:
           paths:
             - ~/.m2
 
-      - firecracker/fire:
-          api_token: FIRE_API_TOKEN
-          author_id: '${FIRE_AUTHOR}'
-          email: '${FIRE_EMAIL}'
-          firecracker_version: v2.0.3
-          project_id: '${FIRE_PROJECT_ID}'
-          test_folder: test_results
