@@ -13,11 +13,14 @@ jobs:
 
       - firecracker/fire:
           api_token: FIRE_API_TOKEN
-          author_id: 123
-          email: '${FIRE_EMAIL}'
+          author_id: 6604
+          email: ${FIRE_EMAIL}
           firecracker_version: v2.0.3
-          project_id: 123
+          project_id: 5079
           test_folder: test_results
+          multitestset: false
+          testset_name: rspec
+          api_uri: https://stage.practitest.com/
 
 
 workflows:
