@@ -13,7 +13,8 @@ jobs:
           # always restore the latest cache
           key: v1-jars-
 
-    test:
+  test:
+    steps:
       - run: lein test
 
       - cache-save:
