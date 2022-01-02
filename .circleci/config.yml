@@ -1,4 +1,6 @@
-version: 2.0
+version: 2.1
+orbs:
+  firecracker: practitest/firecracker@1.0.0
 jobs:
   build:
     docker:
@@ -17,3 +19,11 @@ jobs:
           key: v1-jars-{{ checksum "project.clj" }}
           paths:
             - ~/.m2
+            -
+      - firecracker/fire:
+          api_token: FIRE_API_TOKEN
+          author_id: '${FIRE_AUTHOR}'
+          email: '${FIRE_EMAIL}'
+          firecracker_version: v2.0.3
+          project_id: '${FIRE_PROJECT_ID}'
+          test_folder: test_results
