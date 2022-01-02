@@ -9,9 +9,6 @@ jobs:
     steps:
       - checkout
 
-      - cache-restore:
-          # always restore the latest cache
-          key: v1-jars-
 
       - run: lein test
 
