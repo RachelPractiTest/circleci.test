@@ -14,14 +14,16 @@ jobs:
       - store_test_results:
           path: test-results
 
+      - store_artifacts:
+          path: test-results
+
       - firecracker/fire:
-          firecracker_version: v2.0.3
-          test_folder: test-results
+          project_id: 0000
           author_id: 0000
           api_token: FIRE_API_TOKEN
           email: ${FIRE_EMAIL}
-          project_id: 0000
-          multitestset: false
+          firecracker_version: v2.0.3
+          test_folder: test-results
           testset_name: Circleci_Testset
 
 workflows:
