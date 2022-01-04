@@ -19,12 +19,13 @@ jobs:
 
       - firecracker/fire:
           project_id: ${FIRE_PROJECT_ID}
-          author_id: "6604"
+          author_id: ${FIRE_AUTHOR}
           api_token: FIRE_API_TOKEN
           email: ${FIRE_EMAIL}
           firecracker_version: v2.0.3
           test_folder: test-results
           testset_name: Circleci_Testset
+          api_uri: https://stage.practitest.com/
 
 workflows:
   my-workflow:
