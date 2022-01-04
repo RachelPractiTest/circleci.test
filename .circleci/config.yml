@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  firecracker: practitest/firecracker@dev:db6ef93
+  firecracker: practitest/firecracker@dev:b7655b2
 jobs:
   build:
     working_directory: ~/circleci.test
