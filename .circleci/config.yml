@@ -18,7 +18,7 @@ jobs:
           path: test-results
 
       - firecracker/fire:
-          project_id: ${FIRE_PROJECT_ID}
+          project_id: "5079"
           author_id: "6604"
           api_token: FIRE_API_TOKEN
           email: ${FIRE_EMAIL}
