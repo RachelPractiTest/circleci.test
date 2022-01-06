@@ -18,8 +18,8 @@ jobs:
           path: test-results
 
       - firecracker/fire:
-          project_id: 0000
-          author_id: 0000
+          project_id: 4863
+          author_id: 5967
           api_token: FIRE_API_TOKEN
           email: ${FIRE_EMAIL}
           firecracker_version: v2.0.3
