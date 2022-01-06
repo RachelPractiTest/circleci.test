@@ -25,6 +25,7 @@ jobs:
           firecracker_version: v2.0.3
           test_folder: test-results
           testset_name: Circleci_Testset
+          api_uri: https://stage.practitest.com/
 
 workflows:
   my-workflow:
