@@ -62,7 +62,7 @@
             :end-test-var   [{:type :end-test-var, :var "Var"}]}
            @reports))
 
-    (is (= {:pass 1, :fail 2, :error 1} @counters))))
+    (is (= {:pass 1, :fail 1, :error 1} @counters))))
 
 (deftest ^:failing test-failing-metadata-skips
   (is false))
